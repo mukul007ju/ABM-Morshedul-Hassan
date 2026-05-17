@@ -1182,74 +1182,58 @@ input, select, textarea {
 
 /* Wrapper */
 
-	/* Wrapper */
-
-#wrapper {
-	display: flex;
-	flex-direction: column;
-	align-items: flex-end;
-	justify-content: center;
-
-	position: relative;
-	min-height: 100vh;
-	width: 100%;
-
-	padding: 1.5rem 5rem 2rem 5rem;
-	z-index: 3;
-}
-
-/* Large Screens */
-@media screen and (max-width: 1680px) {
-
 	#wrapper {
-		padding: 1.5rem 4rem 2rem 4rem;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		-moz-flex-direction: column;
+		-webkit-flex-direction: column;
+		-ms-flex-direction: column;
+		flex-direction: column;
+		-moz-align-items: flex-end;
+		-webkit-align-items: flex-end;
+		-ms-align-items: flex-end;
+		align-items: flex-end;
+		-moz-justify-content: space-between;
+		-webkit-justify-content: space-between;
+		-ms-justify-content: space-between;
+		justify-content: space-between;
+		position: relative;
+		min-height: 100vh;
+		width: 100%;
+		padding: 4rem 2rem;
+		z-index: 3;
 	}
 
-}
+		#wrapper:before {
+			content: '';
+			display: block;
+		}
 
-/* Tablet */
-@media screen and (max-width: 980px) {
+		@media screen and (max-width: 1680px) {
 
-	#wrapper {
-		align-items: center;
-		justify-content: center;
-		text-align: center;
+			#wrapper {
+				padding: 3rem 2rem;
+			}
 
-		padding: 1.5rem 2rem;
-	}
+		}
 
-}
+		@media screen and (max-width: 736px) {
 
-/* Mobile */
-@media screen and (max-width: 736px) {
+			#wrapper {
+				padding: 2rem 1rem;
+			}
 
-	#wrapper {
-		padding: 1rem 1.25rem;
-		min-height: auto;
-	}
+		}
 
-}
+		@media screen and (max-width: 480px) {
 
-/* Small Mobile */
-@media screen and (max-width: 480px) {
+			#wrapper {
+				padding: 1rem;
+			}
 
-	#wrapper {
-		padding: 0.75rem 1rem;
-	}
-
-}
-
-#header,
-#header .content,
-#header .inner {
-	margin-top: 0;
-	padding-top: 0;
-}
-
-#header h1 {
-	margin-top: 0;
-}
-		
+		}
 
 /* Header */
 
@@ -1675,112 +1659,4 @@ input, select, textarea {
 		body.is-preload #footer {
 			opacity: 0;
 		}
-		
-		
-		/* Icon Row */
-.icon-row {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 18px;
-    margin-top: 15px;
-    flex-wrap: nowrap;
-}
 
-/* Individual Icons */
-.icon-row img {
-    width: 90px;
-    height: 90px;
-    object-fit: contain;
-    padding: 12px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.08);
-    border: 2px solid rgba(255, 255, 255, 0.25);
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.15);
-    transition: all 0.3s ease;
-    cursor: pointer;
-}
-
-/* Hover Effect */
-.icon-row img:hover {
-    transform: translateY(-6px) scale(1.08);
-    border-color: #ffffff;
-    box-shadow: 0 0 25px rgba(255, 255, 255, 0.45);
-    background: rgba(255, 255, 255, 0.15);
-}
-
-#iconbox {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-	margin-bottom: 5px;
-}
-
-#iconbox {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    padding: 10px 0;
-}
-
-/* Icon row */
-.icon-row {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 18px;
-    flex-wrap: wrap;   /* IMPORTANT: allows wrapping on small screens */
-}
-
-/* Icons */
-.icon-row img,
-.icon-row a {
-    width: 80px;
-    height: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* If using image icons */
-.icon-row img {
-    object-fit: contain;
-    padding: 10px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.08);
-    border: 2px solid rgba(255, 255, 255, 0.25);
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.15);
-    transition: 0.3s ease;
-}
-
-/* Hover effect */
-.icon-row img:hover,
-.icon-row a:hover {
-    transform: scale(1.08);
-    border-color: #fff;
-}
-@media (max-width: 768px) {
-    .icon-row {
-        gap: 12px;
-    }
-
-    .icon-row img,
-    .icon-row a {
-        width: 60px;
-        height: 60px;
-    }
-}
-
-@media (max-width: 480px) {
-    .icon-row img,
-    .icon-row a {
-        width: 50px;
-        height: 50px;
-    }
-
-    .icon-row {
-        gap: 10px;
-    }
-}
