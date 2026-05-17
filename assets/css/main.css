@@ -1701,3 +1701,70 @@ input, select, textarea {
 	margin-bottom: 5px;
 }
 
+#iconbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 10px 0;
+}
+
+/* Icon row */
+.icon-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;   /* IMPORTANT: allows wrapping on small screens */
+}
+
+/* Icons */
+.icon-row img,
+.icon-row a {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* If using image icons */
+.icon-row img {
+    object-fit: contain;
+    padding: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.08);
+    border: 2px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.15);
+    transition: 0.3s ease;
+}
+
+/* Hover effect */
+.icon-row img:hover,
+.icon-row a:hover {
+    transform: scale(1.08);
+    border-color: #fff;
+}
+@media (max-width: 768px) {
+    .icon-row {
+        gap: 12px;
+    }
+
+    .icon-row img,
+    .icon-row a {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .icon-row img,
+    .icon-row a {
+        width: 50px;
+        height: 50px;
+    }
+
+    .icon-row {
+        gap: 10px;
+    }
+}
